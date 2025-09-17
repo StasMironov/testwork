@@ -52,6 +52,7 @@
 	&__bottom {
 		z-index: 999;
 		@include defaultTransition(background-color);
+		max-height: max-content !important;
 
 		.header__container {
 			// padding: rem(16) rem(32) rem(18);
