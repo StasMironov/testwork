@@ -470,5 +470,11 @@
         }
       ]
     }
+  },
+  "button_scroll": {
+    "icon": {
+      "name": "60/btn",
+      "size": "fit"
+    }
   }
 }

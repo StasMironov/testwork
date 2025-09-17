@@ -33,6 +33,11 @@
 
 {% view '&footer' %}
 
+{% view '@button-scroll' with {
+	btn: button_scroll
+}%}
+
+
 {% if block('endPage') is defined %}
     {{ block('endPage') }}
 {% endif %}

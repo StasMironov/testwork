@@ -16,6 +16,7 @@ import validation from './components/validation';
 import FormHandler from './components/form-handler';
 import video from './components/video';
 import { Fancybox } from '@fancyapps/ui';
+import scrollUp from './components/scroll-up';
 
 window.UPB = window.UPB || {};
 window.breakpoints = devices;
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	sliders.init();
 	validation.init();
 	video.init();
+	scrollUp.init();
 	new FormHandler();
 	Fancybox.bind("[data-fancybox='gallery']", {
 		loop: true,
