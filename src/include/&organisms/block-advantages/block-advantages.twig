@@ -1,0 +1,27 @@
+<div class="block-advantages py-48" data-animate-sequence>
+    <div class="container">
+      <div  class="block-advantages__container px-lg-46">
+            {% if block.title %}
+                <h2 class="block-advantages__title h2" data-animate-sequence-el data-animate-sequence-delay="1">
+                    {{block.title}}
+                </h2>
+            {% endif %}
+            <div class="block-advantages__cards">
+                {% for card in block.cards %}
+                    <div class="block-advantages__card" data-animate data-animate-sequence-delay="{{ loop.index }}">
+                        {% view "^card-advantage" with {
+                            card: card
+                        } %}
+                    </div>
+                {% endfor %}
+            </div>
+            {% if block.button %}
+                <div class="block-advantages__button" data-animate-sequence-el data-animate-sequence-delay="4">
+                    {% view '@button' with {
+                        button: block.button
+                    } %}
+                </div>
+            {% endif %}
+      </div>
+    </div>
+</div>

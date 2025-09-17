@@ -1,0 +1,36 @@
+body {
+	background-color: $color-background;
+	//overflow: hidden;
+}
+
+.list {
+	font-size: rem(16);
+	line-height: 1;
+
+	@include media-breakpoint-up(md) {
+		font-size: rem(20);
+	}
+	
+
+	&__li {
+		position: relative;
+		padding-left: rem(25);
+
+		&:after {
+			position: absolute;
+			content: "";
+			width: rem(5);
+			height: rem(2);
+			background-color: $color-black;
+			left: rem(10);
+			bottom: 0;
+			top: -1px;
+			margin: auto;
+		}
+
+		&:not(:last-child){
+			margin-bottom: rem(8);
+		}
+	}
+}
+

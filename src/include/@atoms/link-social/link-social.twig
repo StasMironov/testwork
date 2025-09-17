@@ -1,0 +1,10 @@
+<a class="link-social" href="{{ link_social.href }}">
+    {% if link_social.icon.name %}
+        {% view '@icon' with {
+            icon: {
+                name: link_social.icon.name,
+                size: link_social.icon.size,
+            }
+        } %}
+    {% endif %}
+</a>

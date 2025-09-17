@@ -1,0 +1,26 @@
+.block-benefit {
+    padding: rem(40) 0;
+
+    @include media-breakpoint-up(lg) {
+        padding: rem(97) 0;
+    }
+
+    &__container {
+        max-width: 100%;
+    }
+
+    &__cards {
+        display: grid;
+        gap: rem(16);
+        grid-template-columns: auto;
+
+       
+        @include media-breakpoint-up(md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include media-breakpoint-up(lg) {
+            grid-template-columns: repeat(4, 1fr);
+            gap: rem(30);
+        }
+    }
+}

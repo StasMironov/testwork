@@ -1,0 +1,23 @@
+.input {
+	@include base-input;
+
+	&--file {
+		@include visually-hidden;
+	}
+  }
+
+.input-shell {
+	position: relative;
+}
+
+.parsley-errors-list {
+	position: absolute;
+	top: 110% ;
+	left: auto;
+	right: 0;
+	color: $color-error;
+}
+
+.checkbox + .parsley-errors-list {
+	left: 0;
+}

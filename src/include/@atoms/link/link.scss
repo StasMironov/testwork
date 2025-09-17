@@ -1,0 +1,100 @@
+.link {
+    $root: &;
+    background: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    font-size: rem(13);
+    column-gap: rem(10);
+  
+    &__text {
+        color: $color-dark;
+        @include defaultTransition(color);
+    }
+
+    @include hover {
+        #{$root}__text {
+            color: $color-green;
+        }
+    }
+
+    &--grey {
+        @include hover {
+            #{$root}__text {
+                color: $color-white;
+            }
+        }
+        #{$root}__text {
+            color: $color-gray-6;
+        }
+    }
+
+    &--grey-2 {
+        @include hover {
+            #{$root}__text {
+                color: $color-white;
+            }
+        }
+
+        #{$root}__text {
+            color: $color-gray-4
+        }
+    }
+
+    &--on-black {
+        #{$root}__text {
+            color: $color-white;
+        }
+
+        @include hover {
+            #{$root}__text {
+                color: $color-gray-6;
+            }
+        }
+    }
+
+    &--on-grey {
+        #{$root}__text {
+            color: $color-white;
+        }
+
+        @include hover {
+            #{$root}__text {
+                color: $color-dark;
+            }
+        }
+    }
+
+    &--on-white {
+        color: $color-gray-8;
+
+        #{$root}__text {
+            color: $color-gray-8;
+        }
+
+        @include hover {
+            color: $color-green;
+
+            #{$root}__text {
+                color: $color-green;
+            }
+        }
+    }
+
+    &--xs {
+        font-size: rem(12);
+    }
+
+    &--nav-link {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: rem(12);
+    }
+
+    &--active {
+        .link__text {
+            color: $color-green-light-3;
+        }
+    }
+}

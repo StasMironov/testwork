@@ -1,0 +1,44 @@
+{% if link.href %}
+	<a href="{{ link.href }}"
+	   class="link {% if link.active %}link--active{% endif %}    {% if link.class %} link--{{ link.class }}{% endif %}{% if link.theme %} link--{{ link.theme }}{% endif %}{% if link.background %} link--bg-{{ link.background }}{% endif %}{% if link.disabled %} link--disabled{% endif %}"{% if link.attr %} {{ link.attr }}{% endif %}{% if link.title %} title="{{ link.title }}"{% endif %}>
+		{% if link.icon.name %}
+			{% set icon_class = "link__icon " %}
+			{% if link.icon.right %}
+				{% set icon_class = icon_class ~ "link__icon--right" %}
+			{% endif %}
+			{% view '@icon' with {
+				icon: {
+					name: link.icon.name,
+					size: link.icon.size,
+					class: icon_class
+				}
+			} %}
+		{% endif %}
+		{% if link.text %}
+			<span class="link__text">{{ link.text }}</span>
+		{% endif %}
+	</a>
+{% else %}
+	<button type="{{ link.type?: 'button' }}"
+			class="link{% if link.class %} {{ link.class }}{% endif %}{% if link.theme %} link--{{ link.theme }}{% endif %}{% if link.background %} link--bg-{{ link.background }}{% endif %}"{% if link.attr %} {{ link.attr }}{% endif %}{% if link.title %} title="{{ link.title }}"{% endif %}{% if link.disabled %} disabled{% endif %}>
+		
+		{% if link.icon.name %}
+			{% set icon_class = "link__icon " %}
+			{% if link.icon.right %}
+				{% set icon_class = icon_class ~ "link__icon--right" %}
+			{% endif %}
+			{% view '@icon' with {
+				icon: {
+					name: link.icon.name,
+					size: link.icon.size,
+					class: icon_class
+				}
+			} %}
+		{% endif %}
+		{% if link.text %}
+			<span class="link__text">{{ link.text }}</span>
+		{% endif %}
+	</button>
+{% endif %}
+
+

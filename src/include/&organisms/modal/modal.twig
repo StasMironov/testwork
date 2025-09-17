@@ -1,0 +1,21 @@
+<div class="modal
+	{% if modal.modificator %}modal--{{ modal.modificator }}{% endif %}"
+	 id="{{ modal.id }}"
+	 aria-hidden="true">
+	<div class="modal__overlay" tabindex="-1" data-modal-close>
+		<div class="modal__container" role="dialog" aria-modal="true">
+			<button class="modal__close" aria-label='Close modal' data-modal-close>
+				{% view '@icon' with {
+					icon: {
+						name: "35/close"
+					}
+				} %}
+			</button>
+			<div class='modal__inner' {% if modal.ajax %}data-modal-ajax-container{% endif %}>
+				{% if modal.component and modal.data %}
+					{% view modal.component with modal.data %}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>

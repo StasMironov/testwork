@@ -1,0 +1,74 @@
+.nav-arrows {
+	$root: &;
+
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+
+	&__buttons {
+		display: flex;
+		align-items: center;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: rem(64);
+		height: rem(64);
+		border: 0;
+		padding: 0;
+		border-radius: rem(8);
+		background-color: transparent;
+		color: $color-black;
+		overflow: hidden;
+		@include defaultTransition(background-color, color);
+
+		@include hover {
+			color: $color-green;
+		}
+
+		&:active {
+			color: $color-green;
+		}
+
+		&:disabled {
+			color: rgba($color-black, 0.2);
+			pointer-events: none;
+		}
+
+		#{$root}--theme-white & {
+			color: $color-white;
+
+			@include hover {
+				color: $color-green;
+			}
+
+			&:active {
+				color: $color-green;
+			}
+	
+			&:disabled {
+				color: rgba($color-gray, 0.2);
+				pointer-events: none;
+			}
+		}
+
+		#{$root}--bg-green & {
+			@include hover {
+				color: $color-green-light;
+			}	
+
+			&:active {
+				color: $color-green-light;
+			}
+		}
+
+		.icon {
+			width: rem(40);
+			height: rem(40);
+		}
+	}
+}

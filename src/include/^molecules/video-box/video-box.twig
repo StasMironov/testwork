@@ -1,0 +1,12 @@
+<div class="video-box" {{video.attr}}>
+  <video loop playsinline muted>
+    <source src="{{video.src}}" type="{{video.type}}">
+    Ваш браузер не поддерживает видео.
+  </video>
+  <button class="video-btn video-btn--play" data-btn-play="video-play-btn">
+    <i class="fa-solid fa-play"></i>
+  </button>
+  <button class="video-btn video-btn--pause" data-btn-pause="video-pause-btn">
+    <i class="fa-solid fa-pause"></i>
+  </button>
+</div>

@@ -1,0 +1,7 @@
+.block-resources {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(50);
+  }
+}

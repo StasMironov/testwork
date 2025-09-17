@@ -1,0 +1,115 @@
+<footer class="footer">
+	<div class="footer__container container">
+        <div class="footer__wrapper footer__wrapper--top">
+            {% if footer.logo and footer.logo.link %}
+            <a href="{{footer.logo.link.href}}" class="footer__logo">
+                {% view '@image' with {
+                    image: footer.logo
+                } %}
+            </a>
+            {% endif %}
+            {% if footer.menu %}
+                <div class="footer__menu">
+                    {% for item in footer.menu %}
+                        <div class="footer__menu-block footer-menu-block">
+                            {% if item.title %}
+                            <span class="footer-menu-block__title">{{item.title}}</span>
+                            {% endif %}
+                            {% if item.links %}
+                                <div class="footer-menu-block__item">
+                                    {% for link in item.links %}
+                                        {% view '@link' with {
+                                            link: link
+                                        } %}
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <div class="footer__especially">
+                {% if footer.contacts %}
+                    <div class="footer__contacts">
+                    {% if footer.contacts.tel %}  
+                        {% view '@link' with {
+                            link: footer.contacts.tel
+                        } %}
+                    {% endif %}
+                    {% if footer.contacts.location %}
+                        <span class="footer__contacts-location">
+                            {% view '@icon' with {
+                                icon: {
+                                    name: footer.contacts.location.icon.name,
+                                    size: footer.contacts.location.icon.size,
+                                    class: footer.contacts.location.icon.icon_class
+                                }
+                            } %}
+                            {{footer.contacts.location.text}}
+                        </span>
+                    {% endif %}
+                    </div>
+                {% endif %}
+
+                {% if footer.socials %}
+                    <div class="footer__socials">
+                        {% for link in footer.socials %}
+                            <div class="footer__socials-item">
+                                {% view '@link-social' with {
+                                    link_social: link
+                                } %}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                {% if footer.depatments %}
+                    <div class="footer__depatments">
+                        {% for link in footer.depatments %}
+                            {% view '@link' with {
+                                link: link
+                            } %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                
+            </div>
+            
+        </div>
+
+        <div class="footer__wrapper footer__wrapper--bottom">
+            {% if footer.other_menu.left %}
+                <div class="footer__col">
+                    {% if footer.other_menu.left.text %}
+                        <span>
+                            {{footer.other_menu.left.text}}
+                        </span>
+                    {% endif %}
+                    {% for link in footer.other_menu.left.links %}
+                        {% view '@link' with {
+                            link: link
+                        } %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% if footer.other_menu.right %}
+                <div class="footer__col">
+                    {% view '@link' with {
+                        link: footer.other_menu.right.link
+                    } %}
+                    {% if footer.other_menu.right.creator %}
+                        <span class="footer__creator">
+                            <span class="footer__creator-text">{{footer.other_menu.right.creator.text}}</span>
+                            {% view '@link' with {
+                                link: footer.other_menu.right.creator.link
+                            } %}
+                        </span>
+
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+        
+    </div>
+	
+</footer>

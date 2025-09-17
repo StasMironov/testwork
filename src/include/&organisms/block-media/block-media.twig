@@ -1,0 +1,16 @@
+<div class="block-media" data-animate-custom>
+    <div class="block-media__container container">
+        {% if block.title %}
+            <h2 class="block-media__title h2 px-lg-46" data-animate>
+                {{block.title}}
+            </h2>
+        {% endif %}
+        {% if block.video %}
+            <div class="block-media__frame" data-animate data-animate-sequence-delay="2">
+                {% view '^video-box' with {
+                    video: block.video
+                } %}
+            </div>
+        {% endif %}
+    </div>
+</div>

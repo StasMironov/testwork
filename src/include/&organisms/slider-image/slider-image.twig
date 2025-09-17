@@ -1,0 +1,32 @@
+<div class="slider-image" data-slider-image>
+  <div class="slider-image__container">
+    <div class="slider-image__base">
+      {% if slider.slides %}
+        <div class="swiper" data-slider>
+          <div class="swiper-wrapper">
+            {% for slide in slider.slides %}
+              <div class="slider-image__slide swiper-slide">
+                <a 
+                  href="{{ slide.full_url }}" 
+                  data-fancybox="gallery" 
+                  class="slider-image__link"
+                >
+                  {% view '@image' with {
+                    image: slide
+                  } %}
+                </a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="swiper-button-prev" data-nav-arrow-prev>
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="swiper-button-next" data-nav-arrow-next>
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="swiper-pagination" data-slider-pagination></div>
+      {% endif %}
+    </div>
+  </div>
+</div>

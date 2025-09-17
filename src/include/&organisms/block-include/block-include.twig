@@ -1,0 +1,21 @@
+<div class="block-include">
+    <div class="block-include__container container">
+        {% if block.title %}
+            <h2 class="block-include__title h2 px-lg-46" data-animate data-animate-sequence-delay="1">
+                {{block.title}}
+            </h2>
+        {% endif %}
+        {% if block.text %}
+            <div class="block-include__text px-lg-46" data-animate data-animate-sequence-delay="2">
+                {{block.text}}
+            </div>
+        {% endif %}
+        {% if block.slider %}
+            <div class="block-include__slider" data-animate data-animate-sequence-delay="3">
+                {% view '&slider-image' with {
+                    slider: block.slider
+                } %}
+            </div>
+        {% endif %}
+    </div>
+</div>

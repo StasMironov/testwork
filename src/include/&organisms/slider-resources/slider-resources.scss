@@ -1,0 +1,39 @@
+.slider-resources {
+    &__base {
+        position: relative;
+        display: flex;
+        align-items: center;
+        column-gap: rem(40);
+
+        @include media-breakpoint-up(lg) {
+            padding-bottom: rem(75);
+		}
+		@include media-breakpoint-up(sm) {
+            padding-bottom: rem(50);
+		}
+    }
+
+    .swiper-slide {
+        height: rem(125);
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+       width: rem(40);
+       height: rem(40);
+       color: $color-dark;
+       border: 1px solid rgba(51, 51, 51, 0.1);
+       border-radius: rem(4);
+       font-size: rem(14);
+
+        @include hover {
+            background-color: $color-gray-2;
+        }
+
+        &.disabled {
+            background-color: $color-gray-2;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+}

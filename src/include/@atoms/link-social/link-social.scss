@@ -1,0 +1,16 @@
+.link-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-gray-7;
+    width: rem(39);
+    height: rem(39);
+    border-radius: rem(4);
+    color: $color-green;
+    @include defaultTransition(background-color, color);
+
+    @include hover {
+        color: $color-gray-7;
+        background-color: $color-green-light-3;
+    }
+}

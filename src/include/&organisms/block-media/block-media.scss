@@ -1,0 +1,34 @@
+.block-media {
+    &__container {
+        display: grid;
+        row-gap: rem(24);
+
+        @include media-breakpoint-up(lg) {
+            row-gap: rem(50);
+		}
+    }
+
+    &__frame {
+        height: rem(736);
+
+        @include media-breakpoint-up(lg) {
+			height: rem(550);
+		}
+		@include media-breakpoint-only(md) {
+			height: rem(400);
+		}
+		@include media-breakpoint-down(sm) {
+			height: rem(300);
+		}
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.23;
+
+        span:nth-child(2){
+            color: $color-green-light-3;
+        }
+    }
+}

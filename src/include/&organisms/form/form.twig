@@ -1,0 +1,71 @@
+<form {% if form.id %} id="{{ form.id }}"{% endif %}
+	{% if form.name %} name="{{ form.name }}"{% endif %}
+	{% if form.action %} action="{{ form.action }}"{% endif %}
+	{% if form.method %} method="{{ form.method }}"{% endif %}
+	class="form {% if form.mob_layout %} form--mob-layout {% endif %}"
+	{% if form.attr %} {{ form.attr }}{% endif %}
+	data-parsley-validate{% if form.hasHandler %} data-ajax-form{% endif %}>
+	{% if form.head %} {{ form.head }}{% endif %}
+	<div>
+		<div class="form__container">
+			{% if form.title or form.text %}
+				<div class="form__info">
+					{% if form.title %}
+						<h2 class="form__title" data-ordered-animate>{{ form.title }}</h2>
+					{% endif %}
+					{% if form.text %}
+						<p class="form__text" data-ordered-animate>{{ form.text }}</p>
+					{% endif %}
+				</div>
+			{% endif %}
+			<div class="form__content">
+				<div class="form__fields">
+					{% set delay = 0 %}
+					{% for field in form.fields %}
+						<div class="form__field
+								{% if field.textarea %} form__field--fit{% endif %}
+								{% if field.type == 'hidden' %} form__field--hidden {% endif %}"
+							data-ordered-animate
+						>
+							{% view '@field' with {
+								field: field
+							} %}
+						</div>
+					{% endfor %}
+				</div>
+				{% if form.agreement %}
+					<div class="form__agreement
+							{% if form.agreement.theme %} form__agreement--{{ form.agreement.theme }} {% endif %}"
+						data-ordered-animate
+					>
+						{% view '@field' with {
+							field: form.agreement
+						} %}
+					</div>
+				{% endif %}
+
+				{% if form.agreement_text %}
+					<div class="form__agreement
+							{% if form.agreement.theme %} form__agreement--{{ form.agreement.theme }} {% endif %}"
+						data-ordered-animate
+					>
+						{{ form.agreement_text }}
+					</div>
+				{% endif %}
+
+				{% if form.submit %}
+					<div class="form__submit"
+						data-ordered-animate
+					>
+						{% view '@button' with {
+							button: form.submit
+						} %}
+					</div>
+				{% endif %}
+			</div>
+			<div class="form__answer"
+				data-form-answer
+			></div>
+		</div>
+	</div>
+</form>

@@ -1,0 +1,26 @@
+<div class="slider-resources" data-slider-resources>
+       <div class="slider-resources__container">
+        <div class="slider-resources__base" >
+            {% if slider.slides %}
+				<div class="swiper" data-slider>
+					<div class="swiper-wrapper">
+                        {% for card in slider.slides %}
+                            <div class="slider-resources__slide swiper-slide">
+                                {% view "^card-resource" with {
+                                    card: card
+                                } %}
+                            </div>
+                        {% endfor %}
+					</div>
+				</div>
+                <div class="swiper-button-prev" data-nav-arrow-prev>
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="swiper-button-next" data-nav-arrow-next>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="swiper-pagination" data-slider-pagination></div>
+            {% endif %}
+        </div>
+    </div>
+</div>

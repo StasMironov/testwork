@@ -1,0 +1,32 @@
+.block-bid {
+    &__container {
+        padding-top: rem(45);
+        padding-bottom: rem(50);
+
+        @include media-breakpoint-up(md) {
+            padding-top: rem(60);
+		}
+        @include media-breakpoint-up(lg) {
+            padding-top: rem(90);
+		}
+    }
+
+    &__title {
+        text-align: center;
+        max-width: rem(698);
+        width: 100%;
+        margin: 0 auto;
+        color: $color-white;
+        text-transform: uppercase;
+        margin-bottom: rem(32);
+        
+        @include media-breakpoint-up(lg) {
+            margin-bottom: rem(73);
+		}
+    }
+
+    &__button {
+        width: max-content;
+        margin: 0 auto;
+    }
+}

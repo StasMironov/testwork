@@ -1,0 +1,21 @@
+{
+	"title": "Атомы",
+	"buttons": [
+		{
+			"text": "заказать"
+		},
+		{
+			"href": "javascript:void(0);",
+			"text": "заказать"
+		},
+		{
+			"text": "подробнее",
+			"theme": "white"
+		},
+		{
+			"href": "javascript:void(0);",
+			"text": "подробнее",
+			"theme": "white"
+		}
+	]
+}

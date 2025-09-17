@@ -1,0 +1,5 @@
+// Высота без учета bar в android, ios
+// Для устранения бага в андроид @see https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+$height100vh: calc(var(--vh, 1vh) * 100);
+
+$z-header: 200;

@@ -1,0 +1,474 @@
+{
+  "colors": [
+    "white",
+    "black"
+  ],
+	"breakpoints": {
+		"md": 640,
+		"lg": 990
+	},
+  "placeholder": "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
+  "footer": {
+    "logo": {
+      "src": "tmp/footer/logo.png",
+      "alt": "alt image",
+      "link": {
+        "href": "!#"
+      }
+    },
+    "menu": [
+      {
+        "title": "Образование",
+        "links": [
+          {
+            "text": "Довузовская подготовка",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Детский технопарк",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Среднее профессиональное образование",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Высшее образование",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Дополнительное образование",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Аспирантура",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Ординатура",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Филиал ПущГЕНИ",
+            "href": "!#",
+            "theme": "grey"
+          }
+        ]
+      },
+      {
+        "title": "Университет",
+        "links": [
+          {
+            "text": "Лицензия",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Аккредитация",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Институты",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Корпуса и общежития",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Музей",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Работа в РОСБИОТЕХе",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Сведения об образовательной организации",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Противодействие коррупции",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Противодействие экстремизму",
+            "href": "!#",
+            "theme": "grey"
+          }
+        ]
+      },
+      {
+        "title": "ОБУЧАЮЩИМСЯ И РАБОТНИКАМ",
+        "links": [
+          {
+            "text": "Цифровое пространство",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Единый деканат",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Отдел кадров",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Медицинский кабинет",
+            "href": "!#",
+            "theme": "grey"
+          },
+          {
+            "text": "Военно-учетный стол",
+            "href": "!#",
+            "theme": "grey"
+          }
+        ]
+      }
+    ],
+    "contacts": {
+      "tel": {
+        "href": "tel:8 (800) 550-36-02",
+        "text": "8 (800) 550-36-02",
+        "icon": {
+          "name": "15/tel",
+          "size": "15"
+        },
+        "theme": "on-black"
+      },
+      "location": {
+        "text": "Волоколамское шоссе, д. 11",
+        "icon": {
+          "name": "15/location",
+          "size": "15"
+        }
+      }
+    },
+    "depatments": [
+      {
+        "text": "Министерство науки и высшего образования",
+        "href": "!#",
+        "theme": "grey"
+      },
+      {
+        "text": "Минпросвещения",
+        "href": "!#",
+        "theme": "grey"
+      },
+      {
+        "text": "Департамент образования и науки города Москвы",
+        "href": "!#",
+        "theme": "grey"
+      },
+      {
+        "text": "Версия для слабовидящих",
+        "href": "!#",
+        "icon": {
+          "name": "20/look"
+        },
+        "theme": "grey"
+      }
+    ],
+    "socials": [
+      {
+        "href": "!#",
+        "icon": {
+          "name": "12/vk",
+          "size": "12"
+        }
+      },
+      {
+        "href": "!#",
+        "icon": {
+          "name": "12/ya",
+          "size": "12"
+        }
+      },
+      {
+        "href": "!#",
+        "icon": {
+          "name": "12/telegram",
+          "size": "12"
+        }
+      },
+      {
+        "href": "!#",
+        "icon": {
+          "name": "12/rutube",
+          "size": "12"
+        }
+      }
+    ],
+    "other_menu": {
+      "left": {
+          "text":"2025 © Все права защищены",
+          "links": [
+            {
+              "text": "Политика конфиденциальности",
+              "href": "!#",
+              "class": "xs",
+              "theme": "grey-2"
+            },
+            {
+              "text": "Карта сайта",
+              "href": "!#",
+              "class": "xs",
+              "theme": "grey-2"
+            }
+          ]
+        } 
+      ,
+      "right": {
+        "link":  {
+          "text": "RU",
+          "href": "!#",
+          "class": "xs",
+          "theme": "grey-2"
+        },
+        "creator": {
+          "text": "Разработано в",
+          "link": {
+            "text": "Новые технологии",
+            "href": "!#",
+            "class": "xs",
+            "theme": "on-black"
+          }
+        }
+      }
+    }
+  },
+  "menu": {
+    "navigation": [
+      {
+        "href": "javascript:void(0);",
+        "text": "студентам",
+        "active": true,
+        "class": "nav-link"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "поступающим",
+        "class": "nav-link"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "юбилей",
+        "class": "nav-link"
+      }
+    ],
+    "navigation2": [
+      {
+        "href": "javascript:void(0);",
+        "text": "Сведения об образовательной организации",
+        "class": "xs",
+        "theme": "on-grey"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Институты и кафедры",
+        "class": "xs",
+        "theme": "on-grey"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Руководство",
+        "class": "xs",
+        "theme": "on-grey"
+      },
+      {
+        "href": "javascript:void(0);",
+        "text": "Преподаватели",
+        "class": "xs",
+        "theme": "on-grey"
+      }, 
+      {
+        "href": "javascript:void(0);",
+        "text": "пространство",
+        "class": "xs",
+        "theme": "on-grey"
+      }
+    ]
+  },
+  "modals": [
+    {
+			"id": "contact-us-form",
+			"component": "&modal-form",
+			"data": {
+				"modal": {
+					"form": {
+						"title": "Заголовок",
+						"action": "",
+						"method": "POST",
+						"mob_layout": true,
+						"hasHandler": true,
+						"fields": [
+							{
+								"input": true,
+								"id": "field-input-1",
+								"name": "field-input-1",
+								"type": "email",
+								"placeholder": "E-mail",
+								"required": true
+							},
+              {
+                "input": true,
+                "id": "form-1-input-2",
+                "name": "form-1-input-2",
+                "required": true,
+                "type": "tel",
+                "placeholder": "+7(000)000-00-00",
+                "mask_list": [
+                  "+998-##-###-####",
+                  "+7(###)###-##-##",
+                  "+380(##)###-##-##",
+                  "+7(6##)###-##-##",
+                  "+992-##-###-####",
+                  "+994-##-###-##-##",
+                  "+996-###-######"
+                ]
+              }
+						],
+						"agreement": {
+							"checkbox": true,
+							"id": "form-1-checkbox-1",
+							"name": "form-1-checkbox-1",
+							"text": "Я принимаю <a href='javascript:void(0);' class='link-content' target='_blank'>условия пользовательского соглашения</a> и даю согласие на <a href='javascript:void(0);' class='link-content' target='_blank'>обработку моих персональных данных.</a>",
+							"required": true
+						},
+						"submit": {
+							"button": true,
+							"text": "Позвоните мне",
+							"type": "submit",
+							"theme": "green",
+						  "size": "small"
+						}
+					}
+				}
+			}
+		}
+  ],
+  "header": {
+    "top": {
+      "navigation": [
+          {
+            "href": "javascript:void(0);",
+            "text": "Сведения об образовательной организации",
+            "class": "xs",
+            "theme": "on-grey"
+          },
+          {
+            "href": "javascript:void(0);",
+            "text": "Институты и кафедры",
+            "class": "xs",
+            "theme": "on-grey"
+          },
+          {
+            "href": "javascript:void(0);",
+            "text": "Руководство",
+            "class": "xs",
+            "theme": "on-grey"
+          },
+          {
+            "href": "javascript:void(0);",
+            "text": "Преподаватели",
+            "class": "xs",
+            "theme": "on-grey"
+          }, 
+          {
+            "href": "javascript:void(0);",
+            "text": "пространство",
+            "class": "xs",
+            "theme": "on-grey"
+          }
+      ]
+    },
+    "center": {
+      "location": {
+        "text": "Волоколамское шоссе, д. 11",
+        "icon": {
+          "name": "15/location",
+          "size": "15"
+        }
+      },
+      "socials": [
+        {
+          "href": "javascript:void(0);",
+          "icon": {
+            "name": "15/vk",
+            "size": "15"
+          },
+          "theme": "on-white"
+        },
+        {
+          "href": "javascript:void(0);",
+          "icon": {
+            "name": "15/telegram",
+            "size": "15"
+          },
+          "theme": "on-white"
+        },
+        {
+          "href": "javascript:void(0);",
+          "icon": {
+            "name": "15/rutube",
+            "size": "15"
+          },
+          "theme": "on-white"
+        }
+      ],
+      "tel": {
+        "href": "tel:8(800)550-36-02",
+        "text": "8 (800) 550-36-02",
+        "icon": {
+          "name": "15/tel",
+          "size": "15"
+        },
+        "theme": "on-white"
+      }
+    },
+    "bottom": {
+      "logo": {
+        "src": "tmp/header/logo.svg",
+        "alt": "alt image",
+        "link": {
+          "href": "!#"
+        }
+      },
+      "navigation": [
+        {
+          "href": "javascript:void(0);",
+          "text": "студентам",
+          "active": true,
+          "class": "nav-link"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "поступающим",
+          "class": "nav-link"
+        },
+        {
+          "href": "javascript:void(0);",
+          "text": "юбилей",
+          "class": "nav-link"
+        }
+      ]
+    }
+  }
+}

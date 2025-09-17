@@ -1,0 +1,21 @@
+<div class="block-list">
+    <div class="container">
+        <div class="block-list__container px-lg-46" data-animate data-animate-sequence-delay="1">
+            {% if block.title %}
+                <h2 class="block-list__title h2">
+                    {{block.title}}
+                </h2>
+            {% endif %}
+
+            {% if block.items %}
+                <ul class="block-list__items">
+                    {% for item in block.items %}
+                        <li class="block-list__item" data-animate data-animate-sequence-delay="{{loop.index}}">
+                            {{item}}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+</div>

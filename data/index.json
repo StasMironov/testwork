@@ -1,0 +1,30 @@
+{
+	"project_name": "Project*",
+	"page_list": {
+		"Публичные страницы": [
+			{
+				"link": "main",
+				"name": "Главная страница"
+			}
+		],
+		"Внутренние страницы": [],
+		"Служебное": [
+			{
+				"link": "atoms",
+				"name": "Атомы"
+			},
+			{
+				"link": "molecules",
+				"name": "Молекулы"
+			},
+			{
+				"link": "organisms",
+				"name": "Организмы"
+			},
+			{
+				"link": "typography",
+				"name": "Типографика"
+			}
+		]
+	}
+}

@@ -1,0 +1,93 @@
+<header class="header" role="banner"
+		data-header
+		data-animate-custom
+>
+	{% if header.top %}
+		<div class="header__top">
+			<div class="header__container container">
+				<div class="header__navigation">
+					{% if header.top.navigation %}
+						{% for link in header.top.navigation %}
+							<div data-animate data-animate-sequence-delay="{{ loop.index }}">
+								{% view '@link' with {
+									link: link
+								} %}
+							</div>
+						{% endfor %}
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	{% endif %}
+	<div>
+	
+	{% if header.center %}
+		<div class="header__center">
+			<div class="header__container container">
+				{% if header.center.location %}
+					<div class="header__center-location" data-animate data-animate-sequence-delay="1">
+						{% if header.center.location.icon %}
+							{% view '@icon' with {
+								icon: {
+									name: header.center.location.icon.name,
+									size: header.center.location.icon.size
+								}
+							} %}
+						{% endif %}
+						{% if header.center.location.text %}
+							<span>{{header.center.location.text}}</span>
+						{% endif %}
+					</div>
+				{% endif %}
+				<div class="header__center-wrapper">
+					{% if header.center.socials %}
+						<div class="header__center-socials">
+							{% for link in header.center.socials %}
+								<div data-animate data-animate-sequence-delay="{{ loop.index }}">
+									{% view '@link' with {
+										link: link
+									} %}
+								</div>
+							{% endfor %}
+						</div>
+					{% endif %}
+					{% if header.center.tel %}
+						<div class="header__center-tel" data-animate data-animate-sequence-delay="1">
+							{% view '@link' with {
+								link: header.center.tel
+							} %}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+		</div>
+	{% endif %}
+	{% if header.bottom %}
+		<div class="header__bottom" data-header-bottom>
+			<div class="header__container container">
+				<button type="button" data-menu-burger class="header__toggle not-active" data-animate data-animate-sequence-delay="1">
+					<span></span>
+					<span></span>
+				</button>
+				{% if header.bottom.logo %}
+					<div class="header__bottom-logo" data-animate data-animate-sequence-delay="1">
+						{% view '@image' with {
+							image: header.bottom.logo
+						} %}
+					</div>
+				{% endif %}
+				{% if header.top.navigation %}
+					<div class="header__bottom-navigation">
+						{% for link in header.bottom.navigation %}
+							<div data-animate data-animate-sequence-delay="{{ loop.index }}">
+								{% view '@link' with {
+									link: link
+								} %}
+							</div>
+						{% endfor %}
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	{% endif %}
+</header>

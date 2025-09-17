@@ -1,0 +1,49 @@
+
+/* @font-face {
+    font-family: 'Lato';
+    src: url('Lato-Semibold.eot');
+    src: local('Lato Semibold'), local('Lato-Semibold'),
+        url('Lato-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('Lato-Semibold.woff2') format('woff2'),
+        url('Lato-Semibold.woff') format('woff'),
+        url('Lato-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+} */
+
+/* @font-face {
+    font-family: 'Lato';
+    src: url('Lato-Bold.eot');
+    src: local('Lato Bold'), local('Lato-Bold'),
+        url('Lato-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Lato-Bold.woff2') format('woff2'),
+        url('Lato-Bold.woff') format('woff'),
+        url('Lato-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+} */
+
+@font-face {
+    font-family: 'Lato';
+    src: url('Montserrat-Regular.eot');
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+        url('Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Montserrat-Regular.woff2') format('woff2'),
+        url('Montserrat-Regular.woff') format('woff'),
+        url('Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* @font-face {
+    font-family: 'Lato';
+    src: url('Lato-Medium.eot');
+    src: local('Lato Medium'), local('Lato-Medium'),
+        url('Lato-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Lato-Medium.woff2') format('woff2'),
+        url('Lato-Medium.woff') format('woff'),
+        url('Lato-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+} */
+

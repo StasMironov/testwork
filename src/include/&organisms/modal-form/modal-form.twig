@@ -1,0 +1,12 @@
+<div class="modal-form">
+	{% if modal.title %}
+		<h3 class='modal-form__title'>{{ modal.title }}</h3>
+	{% endif %}
+	{% if modal.form %}
+		<div class="modal-form__form">
+			{% view '&form' with {
+				form: modal.form
+			} %}
+		</div>
+	{% endif %}
+</div>

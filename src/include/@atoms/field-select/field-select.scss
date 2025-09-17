@@ -1,0 +1,55 @@
+.select-shell {
+	position: relative;
+}
+
+select.select {
+	display: block;
+	width: 100%;
+	height: rem(48);
+	margin: 0;
+	padding: 0 rem(56) 0 rem(16);
+	border-radius: rem(8);
+	border: 1px solid $color-black;
+	color: $color-black;
+	background-color: transparent;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	@include text-body;
+	@include defaultTransition(border-color);
+
+	&--outline-none {
+		border: 0;
+	}
+
+	&:not([multiple]) {
+		background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23000' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 15L7.00003 10L17 10L12 15Z' fill='%23141414'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.07615 9.61732C6.23093 9.24364 6.59557 9 7.00003 9L17 9C17.4045 9 17.7691 9.24364 17.9239 9.61732C18.0787 9.99099 17.9931 10.4211 17.7071 10.7071L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L6.29292 10.7071C6.00692 10.4211 5.92137 9.99099 6.07615 9.61732ZM9.41424 11L12 13.5858L14.5858 11H9.41424Z' fill='%23141414'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: right rem(24) top 50%, 0 0;
+		background-size: rem(24) rem(24), 100%;
+	}
+
+	@include hover {
+		border-color: $color-black;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:disabled {
+		opacity: 0.5;
+		cursor: default;
+		pointer-events: none;
+	}
+
+	option {
+		background-color: $color-white;
+	}
+}
+
+select::-ms-expand {
+	display: none;
+}
+

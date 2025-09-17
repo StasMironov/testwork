@@ -1,0 +1,29 @@
+.card-advantage {
+    
+    background-color: rgba($color-green, 0.8);
+    height: 100%;
+    width: 100%;
+    border-radius: rem(8);
+    color: $color-white;
+    @include defaultTransition(background-color);
+    @include hover {
+        background-color: $color-green;	
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: rem(35) rem(37);
+    }
+    @include media-breakpoint-down(md) {
+        padding: rem(16);
+    }
+
+    &__title {
+       font-weight: 600; 
+       text-transform: uppercase;
+       margin-bottom: rem(8);
+    }
+
+    &__text {
+        font-size: rem(18);
+    }
+}

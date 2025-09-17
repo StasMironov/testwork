@@ -1,0 +1,171 @@
+@mixin clear-button {
+	top: 0;
+    right: rem(16);
+    bottom: 0;
+    margin: auto;
+	position: absolute;
+	-webkit-appearance: none;
+	background-image: $i-close;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: rem(20);
+	padding: 0;
+	outline: none !important;
+	cursor: pointer;
+	align-self: center;
+	border: 1px solid transparent;
+	outline: none;
+	background-color: transparent;
+	opacity: 0;
+	pointer-events: none;
+	@include defaultTransition(opacity, border-color);
+	transition-delay: .3s;
+
+	@at-root .field--active &{
+		opacity: 1;
+		pointer-events: all;
+
+		&:hover {
+			transition-delay: 0s;
+			opacity: .5;
+		}
+	}
+}
+
+@mixin search-button{
+	top: rem(9);
+    right: rem(16);
+	position: absolute;
+	-webkit-appearance: none;
+	background-image: $i-search;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: rem(20);
+	margin: 0;
+	padding: 0;
+	outline: none !important;
+	cursor: pointer;
+	align-self: center;
+	border: 1px solid transparent;
+	outline: none;
+	background-color: transparent;
+	opacity: 1;
+	@include defaultTransition(opacity, border-color);
+	transition-delay: .3s;
+
+
+	@include media-breakpoint-down(sm) {
+		top: rem(11);
+		right: rem(12);
+	}
+
+	@at-root .field--active &{
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+.search {
+  	@include base-input;
+	padding-top: rem(12);
+	padding-bottom: rem(12);
+	padding-left: rem(58);
+  	padding-right: rem(58) !important;
+	height: rem(43);
+
+	@include media-breakpoint-down(sm) {
+		padding-left: rem(58);
+	}
+
+  &::-webkit-search-cancel-button {
+		display: none;
+  }
+
+
+//   &::-ms-clear {
+//     display: none;
+//   }
+
+	&::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &:-moz-placeholder,
+  &::-ms-input-placeholder,
+  &::placeholder{
+    color: rgba($color-black, 1) !important; //ie
+		opacity: 1;
+		text-overflow: ellipsis;
+		// @include text-default;
+		@include defaultTransition(opacity);
+  }
+
+	// Отдельно для ie - иначе не будет применен placeholder
+  &:-ms-input-placeholder {
+    color: rgba($color-black, 1);
+  }
+
+	&:focus {
+
+		&::-webkit-input-placeholder,
+		&::-moz-placeholder,
+		&:-moz-placeholder,
+		&::-ms-input-placeholder,
+		&::placeholder{
+			opacity: 0;
+		}
+	}
+
+	& + .field-search__close {
+		@include clear-button;
+		width: rem(16);
+		height: rem(16);
+
+		& +	.field-search__search {
+			@include search-button;
+			width: rem(22);
+			height: rem(22);
+		}
+	}
+
+	
+}
+
+.field-search {
+  position: relative;
+  box-shadow: 0 4px 4px rgba(0,0,0,0.15);
+
+	.field-icon {
+		width: rem(24);
+		height: rem(24);
+		opacity: 1;
+		@include defaultTransition(opacity);
+		transition-delay: .4s;
+
+		@at-root .field--active &{
+			opacity: 0;
+			transition: none;
+		}
+	}
+
+	&--icon-right {
+
+		&:not(.field-search--big) {
+
+			.search {
+				padding-left: rem(19);
+				padding-right: rem(56) !important;
+
+				@include media-breakpoint-down(sm) {
+					padding-left: rem(14);
+					padding-right: rem(48) !important;
+				}
+			}
+
+			.field-icon {
+				left: auto;
+				right: rem(22);
+				width: rem(22);
+				height: rem(22);
+			}
+		}
+	}
+}

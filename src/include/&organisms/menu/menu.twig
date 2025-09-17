@@ -1,0 +1,31 @@
+<div class="menu" data-menu>
+    <div class="menu__container" data-menu-container>
+        <div class="menu__content" data-content >
+				<ul class="menu__list" >
+					{% for item in menu.navigation %}
+						<li class="menu__item" data-link {% if item.attr %}data-trigger {% endif %}>
+							{% if item.href %}
+								<a href="{{ item.href }}"
+								class="menu__link "{% if item.external %} target="_blank"{% endif %}>{{ item.text }}</a>
+							{% else %}
+								<span class="menu__link menu__link--active">{{ item.text }}</span>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+				<ul class="menu__list">
+					{% for item in menu.navigation2 %}
+						<li class="menu__item" data-link {% if item.attr %}data-trigger {% endif %}>
+							{% if item.href %}
+								<a href="{{ item.href }}"
+								class="menu__link "{% if item.external %} target="_blank"{% endif %}>{{ item.text }}</a>
+							{% else %}
+								<span class="menu__link menu__link--active">{{ item.text }}</span>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+        </div>
+    </div>
+    <div class="menu__overlay" data-menu-hide></div>
+</div>

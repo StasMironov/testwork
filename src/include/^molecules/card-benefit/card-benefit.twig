@@ -1,0 +1,17 @@
+<div class="card-benefit">
+    {% if card.qty %}
+        <div class="card-benefit__qty">
+            {{card.qty}}
+        </div>
+    {% endif %}
+    {% if card.title %}
+        <div class="card-benefit__title">
+            {{card.title}}
+        </div>
+    {% endif %}
+    {% if card.text %}
+        <div class="card-benefit__text">
+            {{card.text}}
+        </div>
+    {% endif %}
+</div>

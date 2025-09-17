@@ -1,0 +1,15 @@
+<div class="block-benefit bg-green">
+    <div class="block-benefit__container container" >
+        {% if block.cards %}
+            <div class="block-benefit__cards" data-animate data-animate-sequence-delay="{{ loop.index }}">
+                {% for card in block.cards %}
+                    <div class="block-benefit__card">
+                        {% view "^card-benefit" with {
+                            card: card
+                        } %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>

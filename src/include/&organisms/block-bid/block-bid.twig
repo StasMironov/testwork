@@ -1,0 +1,16 @@
+<div class="block-bid bg-green" data-animate data-animate-sequence-delay="1">
+    <div class="block-bid__container container">
+        {% if block.title %}
+            <h2 class="block-bid__title h2" data-animate-sequence-el data-animate-sequence-delay="2">
+                {{block.title}}
+            </h2>
+        {% endif %}
+        {% if block.action %}
+            <div class="block-bid__button" data-animate data-animate-sequence-delay="3">
+                {% view '@button' with {
+                    button: block.action
+                } %}
+            </div>
+        {% endif %}
+    </div>
+</div>

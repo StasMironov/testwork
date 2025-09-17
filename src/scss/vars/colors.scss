@@ -1,0 +1,49 @@
+$color-true-black: #000;
+$color-black: #202020;
+$color-background: #fff;
+$color-green: #95C11F;
+$color-green-light: #95C11F;
+$color-green-light-2: #D7EF97;
+$color-green-light-3: #38D430;
+$color-green-border: #AFD44F;
+
+$color-blue: #3E9CDC;
+$color-blue-2: #42A9ED;
+
+$color-white: #fff;
+
+$color-purple: #286690;
+
+$color-dark: #000;
+
+$color-gray: #3D4050;
+$color-gray-2: #CACACA;
+$color-gray-3: #E5E5E5;
+$color-gray-4: #888888;
+$color-grey-5: #E5E5EB;
+$color-gray-6: #999999;
+$color-gray-7: #474747;
+$color-gray-8: #BDBDBD;
+$color-gray-9: #E3E3E3;
+
+
+$color-black-2: #2A2B30;
+$color-black-3: #272733;
+$color-error: #CE0E2D;
+
+
+$colors: (
+	"white": $color-white,
+	"black": $color-black,
+	"black-2": $color-black-2,
+	"black-3": $color-black-3,
+	"purple": $color-purple,
+	"dark": $color-dark,
+	"gray": $color-gray,
+	"gray-2": $color-gray-2,
+	"gray-3": $color-gray-3,
+	"blue-2": $color-blue-2,
+	"green": $color-green
+);
+
+

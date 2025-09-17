@@ -1,0 +1,64 @@
+{% extends "layouts::_page.twig" %}
+
+{% block content %}
+
+    
+    {% if title %}
+        <h1 class="h1 container pb-8" data-animate data-animate-sequence-delay="1">
+            {{title}}
+        </h1>
+    {% endif %}
+    <div class="container pb-24 pb-lg-46 pt-4">
+        {% view '^breadcrumbs' with {
+            breadcrumbs: breadcrumbs
+        } %}
+    </div>
+    
+    <div class="pb-24 pb-lg-46  pt-0 pt-lg-46" >
+        {% view '&block-media' with {
+            block: block_media
+        } %}
+    </div>
+     <div class="py-24 py-lg-46">
+        {% view '&block-info' with {
+            block: block_info
+        } %}
+    </div>
+   <div class="py-24 py-lg-46">
+        {% view '&block-advantages' with {
+            block: block_advantages
+        } %}
+    </div>
+   <div class="py-24 py-lg-46">
+        {% view '&block-benefit' with {
+            block: block_benefit
+        } %}
+    </div>
+    <div class="py-24 py-lg-46">
+        {% view '&block-include' with {
+            block: block_include
+        } %}
+    </div>
+    <div class="py-24 py-lg-46">
+        {% view '&block-include' with {
+            block: block_include2
+        } %}
+    </div>
+    <div class="pt-24 pt-lg-46 pb-24 pb-lg-96">
+        {% view '&block-list' with {
+            block: block_list
+        } %}
+    </div>
+    <div class="py-40">
+        {% view '&block-bid' with {
+            block: block_bid
+        } %}
+    </div>
+    <div class="pt-64 pb-96">
+        {% view '&block-resources' with {
+            block: block_resources
+        } %}
+    </div>
+
+    
+{% endblock %}

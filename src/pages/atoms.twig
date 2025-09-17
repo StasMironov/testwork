@@ -1,0 +1,30 @@
+{% extends "layouts::_page.twig" %}
+
+{% block content %}
+
+
+<!--<editor-fold desc="@link-action">-->
+
+		<div class="py-24 bg-white">
+			<div class="container">
+				<p class="h2 mb-24"><code>@button</code></p>
+
+				<div class="mb-24">
+					<p class="text-lead mb-16"><code>Button</code></p>
+
+					<div style="display: flex; flex-wrap: wrap;">
+						{% for button in buttons %}
+							<div class="py-8 px-8">
+								{% view '@button' with {
+									button: button
+								} %}
+							</div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+{% endblock %}

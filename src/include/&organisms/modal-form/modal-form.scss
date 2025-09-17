@@ -1,0 +1,36 @@
+.modal-form {
+	$b: &;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+
+	@include media-breakpoint-up(sm) {
+		padding: rem(48) rem(16) rem(35);
+	}
+	@include media-breakpoint-up(md) {
+		padding: rem(48) rem(42) rem(35);
+	}
+
+	&__form {
+		margin: auto;
+	}
+
+	&__text {
+		margin-bottom: rem(24);
+		max-width: rem(370);
+	}
+
+	.form .form__title {
+		font-size: rem(22);
+		margin-bottom: rem(24);
+
+		@include media-breakpoint-up(md) {
+			@include h2;
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(32);
+			font-size: rem(48);
+		}
+	}
+}

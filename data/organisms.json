@@ -1,0 +1,84 @@
+{
+	"title": "Организмы",
+	"sliderProduct": {
+		"slides": [
+			{
+				"label": "лазерные станки",
+				"discount":{
+					"text": "-15%"
+				},
+				"title": "CERTON HIGH&nbsp;SPEED",
+				"desc": "Лазерный станок CERTON 6090 High speed (130 Вт) осуществляет лазерную резку и гравировку неметаллических материалов, таких как пластик, фанера, дерево, оргстекло, акрил, кожа, ткань и т.п. ",
+				"image": {
+					"src": "tmp/sliders/slider-product/product1.png",
+					"alt": "alt image",
+					"tab": {
+						"srcset": [
+							{
+								"src": "tmp/sliders/slider-product/product1.png",
+								"scale": "1"
+							}
+						]
+					},
+					"mob": {
+						"srcset": [
+							{
+								"src": "tmp/sliders/slider-product/product1-mob.png",
+								"scale": "1"
+							}
+						]
+					}
+				},
+				"action": {
+					"href": "javascript:void(0);",
+					"text": "подробнее о товаре",
+					"title": "link-action",
+					"icon": {
+						"name": "12/arrow-right",
+						"size": "12"
+					}
+				}
+			},
+			{
+				"label": "лазерные станки 2",
+				"title": "CERTON HIG ",
+				"desc": "Лазерный станок CERTON 6090 High speed (130 Вт)",
+				"image": {
+					"src": "tmp/sliders/slider-product/product1.png",
+					"alt": "alt image",
+					"tab": {
+						"srcset": [
+							{
+								"src": "tmp/sliders/slider-product/product1.png",
+								"scale": "1"
+							}
+						]
+					},
+					"mob": {
+						"srcset": [
+							{
+								"src": "tmp/sliders/slider-product/product1-mob.png",
+								"scale": "1"
+							}
+						]
+					}
+				},
+				"action": {
+					"href": "javascript:void(0);",
+					"text": "подробнее о товаре",
+					"title": "link-action",
+					"icon": {
+						"name": "12/arrow-right",
+						"size": "12"
+					}
+				}
+			}
+		],
+		"action": {
+			"href": "javascript:void(0);",
+			"text": "Перейти в блог",
+			"title": "Перейти в блог"
+		}
+		
+	}
+}

@@ -1,0 +1,114 @@
+
+@keyframes spinAround {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+
+
+$sal-animation-duration: 1s !default;
+$sal-animation-delay: 0.2s !default;
+$sal-slide-offset-Y: 50px !default;
+
+@mixin fade-in-up {
+	transition-duration: 0s;
+	transition-delay: 0s;
+	transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+	transition-property: opacity, transform;
+	opacity: 0;
+	transform: translateY($sal-slide-offset-Y);
+
+	&.animate {
+		opacity: 1;
+		transform: none;
+		transition-duration: $sal-animation-duration;
+		transition-delay: $sal-animation-delay;
+	}
+	//@at-root .animate-disabled & {
+	//	opacity: 1;
+	//	transform: none;
+	//}
+}
+
+[data-animate],
+[data-animate-step] {
+	transform: translateY($sal-slide-offset-Y);
+	opacity: 0;
+
+	&[data-fade-left] {
+		transform: translateX($sal-slide-offset-Y);
+	}
+
+	&[data-scale] {
+		transform: scale(1.08);
+	}
+
+	@at-root .is-loaded & {
+		transition-delay: $sal-animation-delay;
+		transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+		transition-duration: $sal-animation-duration;
+		transition-property: opacity, transform;
+		//transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+	}
+
+	&.animate {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+@for $i from 0 through 10 {
+	[data-animate-delay='#{$i}'] {
+		&.animate {
+			transition-delay: $sal-animation-delay * $i;
+		}
+	}
+}
+
+//.animate-disabled {
+//	& [data-animate] {
+//		transform: none;
+//		opacity: 1;
+//	}
+//}
+
+[data-animate-sequence] {
+	[data-animate-sequence-el] {
+		transform: translateY($sal-slide-offset-Y);
+		opacity: 0;
+
+		@at-root .is-loaded & {
+			transition-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+			transition-duration: $sal-animation-duration;
+			transition-property: opacity, transform;
+		}
+	}
+
+	&.animate {
+		[data-animate-sequence-el] {
+			transform: none;
+			opacity: 1;
+		}
+	}
+}
+
+// Delay custom
+@for $i from 0 through 10 {
+	[data-animate-sequence-delay='#{$i}'] {
+		@at-root .is-loaded & {
+			transition-delay: $sal-animation-delay * $i;
+		}
+	}
+}
+
+// User text
+.user-text[data-animate-user-text] {
+	>h1, >h2, >h3, >h4, >h5, >h6, >p, >ul, >ol, >blockquote {
+		opacity: 0;
+
+		@include fade-in-up;
+	}
+}

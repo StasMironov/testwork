@@ -1,0 +1,126 @@
+.checkbox {
+	$root: &;
+
+	position: relative;
+	display: inline-block;
+	min-height: rem(24);
+	min-width: rem(24);
+	cursor: pointer;
+
+	&:hover {
+		#{$root}__box {
+			border-color: $color-dark;
+		}
+	}
+
+	&__input {
+		@include visually-hidden;
+	}
+
+	&__box {
+		top: 0;
+		left: 0;
+		margin: auto;
+		bottom: 0;
+		display: block;
+		height: rem(20);
+		width: rem(20);
+		background-color: transparent;
+		border: 2px solid $color-grey-5;
+		border-radius: rem(2);
+		@include defaultTransition(border-color);
+
+		@include media-breakpoint-up(sm) {
+			position: relative;
+			display: inline-flex;
+		}
+		@include media-breakpoint-up(md) {
+			display: block;
+			position: absolute;
+		}
+		@include media-breakpoint-up(lg) {
+			height: rem(30);
+			width: rem(30);
+		}
+
+		
+
+		&:after {
+			position: absolute;
+			content: "";
+			opacity: 0;
+			@include defaultTransition(opacity);
+		}
+
+		#{$root}--radio & {
+			top: 2px;
+			left: 2px;
+			width: rem(20);
+			height: rem(20);
+			border-radius: 50%;
+		}
+
+
+
+		#{$root}__input:checked ~ & {
+			background-color: $color-green;
+			border-color: $color-green;
+		}
+
+		#{$root}__input:disabled ~ & {
+			border-color: rgba($color-dark, 0.3);
+		}
+
+		#{$root}:not(#{$root}--radio) #{$root}__input:disabled ~ & {
+			&:after {
+				border-color: rgba($color-dark, 0.3);
+			}
+		}
+
+		#{$root}--radio #{$root}__input:disabled ~ & {
+			&:after {
+				background-color: rgba($color-black, 0.3);
+			}
+		}
+
+		// --white
+
+		
+	}
+
+	&__text {
+		@include text-body;
+		color: $color-gray-4;
+
+		@include media-breakpoint-up(sm) {
+			display: inline;
+			padding-left: rem(10);
+			line-height: 1.5;
+		}
+		@include media-breakpoint-up(md) {
+			display: block;
+			padding-left: rem(32);
+		}
+		@include media-breakpoint-up(lg) {
+			padding-left: rem(60);
+		}
+
+		.link-content {
+			color: $color-green-light-3;
+			@include defaultTransition(color);
+			font-size: rem(15);
+
+			&:hover {
+				color: $color-dark;
+			}
+		}
+	}
+}
+
+.checkbox.parsley-error ~.parsley-errors-list {
+	color: $color-error;
+}
+
+.checkbox.parsley-error .checkbox__box {
+	border-color: $color-error;
+}

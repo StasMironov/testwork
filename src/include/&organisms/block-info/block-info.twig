@@ -1,0 +1,29 @@
+<div class="block-info" data-animate-custom>
+   <div class="container">
+     <div class="block-info__container px-lg-46">
+        {% if block.title %}
+            <h2 class="block-info__title h2" data-animate data-animate-sequence-delay="2">
+                {{block.title}}
+            </h2>
+        {% endif %}
+        {% if block.text %}
+            <div class="block-info__text" data-animate data-animate-sequence-delay="3">
+                {% for line in block.text %}
+                    <span class="block-info__text-line">
+                        {{line}}
+                    </span>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% if block.images %}
+            <div class="block-info__wrapper">
+                {% for image in block.images %}
+                    <div class="block-info__image" data-animate data-animate-sequence-delay="{{ loop.index }}">
+                        {% view '@image' with { image: image } %}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+   </div>
+</div>

@@ -1,0 +1,65 @@
+.slider-image {
+    &__container {
+        position: relative;
+        // padding: 0 180px;
+    }
+
+    &__base {
+        display: flex;
+        column-gap: rem(140);
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        
+
+        @include media-breakpoint-up(lg) {
+            padding-bottom: rem(75);
+		}
+		@include media-breakpoint-up(sm) {
+            padding-bottom: rem(50);
+		}
+    }
+
+    .swiper {
+        width: 100%;
+        max-width: rem(1047);
+      
+        @include media-breakpoint-only(lg) {
+            height: rem(698);
+		}
+        @include media-breakpoint-down(md) {
+            height: rem(300);
+		}
+		@include media-breakpoint-down(sm) {
+            height: rem(250);
+		}
+
+        .swiper-slide {
+            max-width: 100%;
+            width: 100% !important;
+            img {
+                @include defaultTransition(transform);
+
+                @include hover {
+                    background-color: $color-white;
+                    transform: scale(1.07);
+                }
+            }
+        }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: rem(88);
+        height: rem(88);
+        background-color: $color-green;
+        border: 1px solid $color-green;
+        color: $color-white;
+        font-size: rem(44);
+
+        @include hover {
+            background-color: $color-white;
+            color: $color-green;
+        }
+    }
+}

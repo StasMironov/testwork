@@ -1,0 +1,18 @@
+<div class="block-resources">
+    <div class="container">
+        <div class="block-resources__container">
+            {% if block.title %}
+                <h2 class="block-resources__title h2" data-animate data-animate-sequence-delay="3">
+                    {{block.title}}
+                </h2>
+            {% endif %}
+            {% if block.slider %}
+                <div class="block-resources__slider" data-animate data-animate-sequence-delay="4">
+                    {% view '&slider-resources' with {
+                        slider: block.slider
+                    } %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

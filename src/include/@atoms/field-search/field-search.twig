@@ -1,0 +1,28 @@
+<div class="field-search {% if field.big %} field-search--big{% endif %} {% if field.icon_right %} field-search--icon-right{% endif %}">
+    {% if field.icon %}
+        {% view '@field-icon' with {
+            icon: field.icon
+        } %}
+    {% endif %}
+    <input
+        type="search"
+        {% if field.id %}id="{{ field.id }}"{% endif %}
+        name="{{ field.name }}"
+        class="search{% if field.class %} {{ field.class }}{% endif %}"
+
+        {% if field.placeholder %} placeholder="{{ field.placeholder }}"{% endif %}
+        {% if field.pattern %} pattern="{{ field.pattern }}" data-pristine-pattern-message="{{ field.error.pattern?: messages.error.pattern }}"{% endif %}
+        {% if field.required %} required data-pristine-required-message="{{ field.error.required?: messages.error.required }}"{% endif %}
+        {% if field.autocomplete %} autocomplete="{{ field.autocomplete }}"{% endif %}
+        {% if field.readonly %} readonly{% endif %}
+        {% if field.disabled %} disabled{% endif %}
+        {% if field.value %} value="{{ field.value }}"{% endif %}
+        {% if field.minlength %} minlength="{{ field.minlength }}" data-pristine-minlength-message="{{ field.error.minlength?: messages.error.minlength }}"{% endif %}
+        {% if field.maxlength %} maxlength="{{ field.maxlength }}" data-pristine-maxlength-message="{{ field.error.maxlength?: messages.error.maxlength }}"{% endif %}
+        {% if field.min %} min="{{ field.min }}"{% endif %}
+        {% if field.max %} max="{{ field.max }}"{% endif %}
+        {% if field.attr %} {{ field.attr }}{% endif %}
+    >
+	<button class="field-search__close" type="reset"></button>
+    <button class="field-search__search" type="submit"></button>
+</div>
